@@ -1,0 +1,14 @@
+{
+  "name": "grids",
+  "version": "1.0.0",
+  "description": "learning slimplified css grids",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass scss/_main.scss css/style.css"
+  },
+  "author": "alex favour",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
