@@ -4,7 +4,7 @@
   "description": "learning slimplified css grids",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass scss/_main.scss css/style.css -W"
+    "compile:sass": "node-sass sass/main.scss css/style.css -W"
   },
   "author": "alex favour",
   "license": "ISC",
