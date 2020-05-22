@@ -9,9 +9,21 @@
 
 .header-2{
  @extend %heading;
+
+ font-size: 1.2rem;
+ text-transform: uppercase;
+ color: $color-primary;
 }
 .header-3{
  @extend %heading;
+  
+ font-size:2.5rem;
+ text-transform: uppercase;
+ line-height: 1;
+ &--dark{
+  color: $color-grey-dark-2;
+}
+
 }
 
 .header-4{
@@ -26,4 +38,29 @@
       color: $color-grey-dark-2;
   }
 
+}
+
+.btn{
+  border: none;
+  padding: 1.8rem 4rem;
+  font-size: 1.5rem;
+  background-color: $color-primary-dark;
+  color:#fff;
+  font-family: $font-display;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s;
+  &:hover{
+    background-color: $color-grey-dark-2;
+  }
+}
+
+.mb-sm{
+ margin-bottom: 2rem;
+}
+.mb.md{
+  margin-bottom: 4rem;
+}
+.mb-lg{
+  margin-bottom: 5rem;
 }

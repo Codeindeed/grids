@@ -23,12 +23,46 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
+.header-2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #c69963; }
+
+.header-3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  line-height: 1; }
+  .header-3--dark {
+    color: #6D5D4B; }
+
 .header-4 {
   font-size: 1.9rem; }
   .header-4--light {
     color: #aaa; }
   .header-4--dark {
     color: #6D5D4B; }
+
+.btn {
+  border: none;
+  padding: 1.8rem 4rem;
+  font-size: 1.5rem;
+  background-color: #B28451;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s; }
+  .btn:hover {
+    background-color: #6D5D4B; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb.md {
+  margin-bottom: 4rem; }
+
+.mb-lg {
+  margin-bottom: 5rem; }
 
 .sidebar {
   background: #c69963;
@@ -47,7 +81,7 @@ body {
   grid-column: center-start/center-end;
   margin: 15rem 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
   align-items: start; }
 
@@ -67,15 +101,53 @@ body {
 
 .story__pictures {
   background-color: #B28451;
-  grid-column: fullstart/col-end 4; }
+  grid-column: fullstart/col-end 4;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../images/back.jpg); }
+  .story__pictures--image-1 {
+    width: 100%;
+    grid-row: 2/6;
+    grid-column: 2/6;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5); }
+  .story__pictures--image-2 {
+    width: 115%;
+    grid-row: 4/6;
+    grid-column: 4/7;
+    z-index: 20;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5); }
 
 .story__content {
-  background-color: #aaa;
-  grid-column: col-start 5/fullend; }
+  background-color: #f9f7f6;
+  grid-column: col-start 5/fullend;
+  padding: 6rem 10vw;
+  display: grid;
+  align-content: center;
+  justify-items: start; }
+
+.story__text {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 4rem;
+  line-height: 2; }
 
 .homes {
-  background-color: #aaa;
-  grid-column: center-start/center-end; }
+  grid-column: center-start/center-end;
+  margin: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 7rem; }
+
+.home {
+  background-color: #c69963; }
+  .home__image {
+    width: 100%; }
+  .home__location svg, .home__rooms svg, .home__price svg, .home__area svg {
+    fill: #c69963;
+    width: 2rem;
+    height: 2rem; }
 
 .gallery {
   background-color: #aaa;
