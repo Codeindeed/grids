@@ -1,4 +1,62 @@
 .header{
     background-color: $color-secondary;
     grid-column: fullstart/col-end 6;
+
+    background-image: linear-gradient(rgba($color-secondary,0.95),rgba($color-secondary,0.95)), 
+    url(../images/back.jpg);
+    background-size:cover;
+    background-position: center;
+
+
+    padding: 8rem;
+    padding-top: 4rem;
+    display: grid;
+    grid-template-rows: 1fr min-content  minmax(6rem, min-content) 1fr;
+    grid-template-columns:min-max(min-content, max-content);
+    grid-gap:1.5rem;
+    justify-content: center;
+    @media only screen and(max-width: $bp-medium){
+        grid-column: 1/-1;
+     }
+     @media only screen and(max-width: $bp-largest){
+       padding: 5rem;
+     }
+
+    &__button{
+        align-self: start;
+        justify-self:start ;
+    }
+    &__seenon-logo{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3rem;
+        justify-items:center;
+    }
+    &__image{
+       max-height: 2.5rem;
+       max-width: 100%;
+        filter:brightness(60%);
+    }
+    &__logo{
+        height: 3rem;
+        justify-self: center;
+    }
+
+    &__seenon{
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+
+        font-size:1.6rem;
+        color: $color-grey-light-2;
+         grid-column-gap: 2rem;
+         align-items: center;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 2px;
+            background-color: currentColor;
+            display: block;
+        }
+    }
 }
